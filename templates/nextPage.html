@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gift Card Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    label {
+      margin-bottom: 10px;
+    }
+    input, select {
+      margin-top: 5px;
+    }
+    .submit-btn {
+      margin-top: 10px;
+      background-color: #1d0d00;
+      color: rgb(255, 255, 255);
+      padding: 10px 20px;
+      border: none;
+      opacity: 0.5;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <form id="giftCardForm" method="POST">
+    <label>Gift Card Name: <input type="text" name="giftCardName" required></label><br>
+    <label>Available Balance: <input type="text" name="availableBalance" required></label><br>
+    <label>Type: <select name="type" required>
+      <option value="digital">Digital</option>
+      <option value="physical">Physical</option>
+    </select></label><br>
+    <label>Condition: <select name="condition" required>
+      <option value="used">Used</option>
+      <option value="unused">Unused</option>
+    </select></label><br>
+    <label>Card Number: <input type="text" name="cardNumber" required></label><br>
+    <label>Pin Number: <input type="text" name="pinNumber" required></label><br>
+    <label>Email to Contact: <input type="email" name="email" required></label><br>
+    <label>PayPal or Zelle Address: <input type="text" name="paymentAddress" required></label><br>
+    <label><input type="checkbox" id="termsCheckbox" required> I accept the terms and conditions</label><br>
+    <button type="submit" class="submit-btn" disabled>Submit</button>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
